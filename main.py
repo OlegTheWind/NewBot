@@ -5,8 +5,9 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 import time
 from scrap_pikabu import *
 import json
+from token_VK import token
 
-session = vk_api.VkApi(token="vk1.a.4M8Aexma27pLK-W_nyVSVPU0FUVLGy0pGvkiAD2Q2uOGMXfCcLYepIALr-yHjnmJiVx5xIbh1PEthRpXapiMX6pi7w16glc9zh9subvcghi_DVKpCQcIU6Ugrk5AVGOjJc28kOKkpO5Ytq2-eRYGKlY-fG8QOAl27nS6gxCrGR3E086VmNkho-EyV6DnvQecK3a5G45GbleZ7Dh5yH8zmw")
+session = vk_api.VkApi(token=token)
 
 def send_message(user_id, message, keyboard=None, attachment=None):
     keyboard = keyboard.get_keyboard() if keyboard else None
